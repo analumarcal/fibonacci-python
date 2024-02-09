@@ -1,12 +1,15 @@
+# Vetores e variáveis
 fibonacci = [0, 1]
 fibonacciExibir = []
 numero = 0
 continuar = True
 
+# Criando o vetor que contém a sequência de Fibonacci
 for i in range(0, 100):
     push = fibonacci[i] + fibonacci[i + 1] 
     fibonacci.append(push)
 
+# Parte do sistema onde o usuário insere um valor inteiro e o sistema valida se este valor faz parte ou não da sequência de Fibonacci
 while continuar:
     try:
         numero = int(input("Digite um número inteiro para descobrir se ele faz parte da sequência de Fibonacci: "))
@@ -24,8 +27,10 @@ while continuar:
         print("Digite um número inteiro e válido!")
     except ValueError:
         print("Digite um número inteiro e válido!")
-        
+ 
+# Criando vetor que guarda apenas os 10 primeiros valores da sequência de Fibonacci
 for i in range(0, 9):
     fibonacciExibir.append(fibonacci[i])
     
+# Exibbindo os 10 primeiros valores da sequência de Fibonacci
 print(f"10 primeiros valores da sequência de Fibonacci: {fibonacciExibir}.")
