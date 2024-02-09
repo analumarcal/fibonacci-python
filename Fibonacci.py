@@ -1,8 +1,9 @@
 fibonacci = [0, 1]
+fibonacciExibir = []
 numero = 0
 continuar = True
 
-for i in range(0, 50):
+for i in range(0, 100):
     push = fibonacci[i] + fibonacci[i + 1] 
     fibonacci.append(push)
 
@@ -23,3 +24,8 @@ while continuar:
         print("Digite um número inteiro e válido!")
     except ValueError:
         print("Digite um número inteiro e válido!")
+        
+for i in range(0, 9):
+    fibonacciExibir.append(fibonacci[i])
+    
+print(f"10 primeiros valores da sequência de Fibonacci: {fibonacciExibir}.")
